@@ -83,6 +83,8 @@ class jenkins(
   $cli                = undef,
 ) inherits jenkins::params {
 
+  $port = 8080
+
   validate_bool($lts, $install_java, $repo)
   validate_hash($config_hash, $plugin_hash)
 
